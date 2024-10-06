@@ -9,14 +9,18 @@ import "@copilotkit/react-ui/styles.css";
 
 import { CopilotPopup } from "@copilotkit/react-ui";
 import { useCopilotReadable } from '@copilotkit/react-core';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 const App = () => {
 
   useEffect(() => {
     document.body.style.zoom = '80%';
   }, []);
 
+  const runtimeurl = `${API_URL}/api/copilotkit`;
+
   return (
-    <CopilotKit runtimeUrl="api/copilotkit">
+    <CopilotKit runtimeUrl={runtimeurl}>
       <CoreApp />
       <CopilotPopup
         instructions={`You are an AI-powered product advisor designed to assist users in finding the best products based on a pre-scraped list of products. Your primary functions include:
@@ -57,7 +61,7 @@ const CoreApp = () => {
     console.log(products);
 
     try {
-      const response = await axios.post('/api/products', {
+      const response = await axios.post(`${API_URL}/api/products`, {
         query_url: url,
       });
       console.log(response.data);
