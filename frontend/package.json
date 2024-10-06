@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postinstall": "node scripts/override_module.js"
+    "postinstall": "node scripts/override_module.cjs"
   },
   "dependencies": {
     "@copilotkit/react-core": "^1.3.2",
