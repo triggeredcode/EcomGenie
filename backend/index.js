@@ -35,6 +35,9 @@ app.use("/api/copilotkit", async (req, res, next) => {
     }
 });
 
+app.get('/', async (req, res) => {
+    res.send('Genie Backend Server running...');
+});
 
 app.use('/api/products', productRoutes);
 
