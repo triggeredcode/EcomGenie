@@ -10,7 +10,10 @@ import "@copilotkit/react-ui/styles.css";
 import { CopilotPopup } from "@copilotkit/react-ui";
 import { useCopilotReadable } from '@copilotkit/react-core';
 
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+console.log('API URL:', API_URL);
 const App = () => {
 
   useEffect(() => {
