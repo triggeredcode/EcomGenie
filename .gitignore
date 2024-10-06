@@ -32,3 +32,6 @@ Thumbs.db
 # Miscellaneous
 *.bak
 *.tmp
+
+
+env.config.js
