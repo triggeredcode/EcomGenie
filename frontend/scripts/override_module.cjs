@@ -5,7 +5,7 @@ const path = require('path');
 const targetPath = path.join(__dirname, '..', 'node_modules', '@copilotkit', 'shared', 'dist', 'chunk-ZUUDJSVP.mjs');
 
 // Path to your override file
-const overridePath = path.join(__dirname, 'mymodule.js');
+const overridePath = path.join(__dirname, 'mymodule.mjs');
 
 // Copy the override file to the target location
 fs.copyFileSync(overridePath, targetPath);
