@@ -1,19 +1,29 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#gradient-fill)"/><defs><linearGradient id="gradient-fill" x1="0" y1="0" x2="100%" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#003f5b" /><stop offset="0.09090909090909091" stop-color="#005165" /><stop offset="0.18181818181818182" stop-color="#00646a" /><stop offset="0.2727272727272727" stop-color="#00766b" /><stop offset="0.36363636363636365" stop-color="#008667" /><stop offset="0.45454545454545453" stop-color="#00955e" /><stop offset="0.5454545454545454" stop-color="#00a150" /><stop offset="0.6363636363636364" stop-color="#45a83d" /><stop offset="0.7272727272727273" stop-color="#7cac25" /><stop offset="0.8181818181818182" stop-color="#abab00" /><stop offset="0.9090909090909091" stop-color="#d6a400" /><stop offset="1" stop-color="#ff9913" /></linearGradient></defs></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+ :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="url(#gradient-fill)"/><defs><linearGradient id="gradient-fill" x1="0" y1="0" x2="100%" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#003f5b" /><stop offset="0.09090909090909091" stop-color="#005165" /><stop offset="0.18181818181818182" stop-color="#00646a" /><stop offset="0.2727272727272727" stop-color="#00766b" /><stop offset="0.36363636363636365" stop-color="#008667" /><stop offset="0.45454545454545453" stop-color="#00955e" /><stop offset="0.5454545454545454" stop-color="#00a150" /><stop offset="0.6363636363636364" stop-color="#45a83d" /><stop offset="0.7272727272727273" stop-color="#7cac25" /><stop offset="0.8181818181818182" stop-color="#abab00" /><stop offset="0.9090909090909091" stop-color="#d6a400" /><stop offset="1" stop-color="#ff9913" /></linearGradient></defs></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-a {
+/*a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -65,4 +75,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
