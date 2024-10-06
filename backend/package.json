@@ -2,10 +2,10 @@
   "name": "ecomgenie",
   "version": "1.0.0",
   "description": "EcomGenie leverages advanced AI technology to provide personalized product recommendations from Amazon or other e-commerce, tailored specifically to your unique needs and preferences. Whether you’re looking for the latest gadgets, fashion trends, or everyday essentials, our AI Copilot ensures you find the perfect product every time. Experience a smarter, more intuitive shopping journey with our AI-powered assistant.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "keywords": [
     "Ai-assistant",
