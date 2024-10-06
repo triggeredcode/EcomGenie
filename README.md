@@ -73,7 +73,7 @@ You can set these variables in a `.env` file at the root of the project.
 1. **Start the backend server:**
    ```sh
    cd backend
-   node app.js
+   node index.js
    ```
 
 2. **Start the frontend development server:**
