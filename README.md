@@ -37,7 +37,7 @@ To get started, download the project repository from the following link:
 
 Before running the application, you need to set up the following environment variables:
 
-- `SCRAPER_API_KEY`: Your Scraper API key ( [Sign up](https://docs.scraperapi.com/nodejs#:~:text=If%20you%20haven%E2%80%99t%20signed%20up%20for%20an%20account%20yet%2C%20then%20sign%20up%20for%20a%20free%20trial%20here%20with%205%2C000%20free%20API%20credits!)
+- `SCRAPER_API_KEY`: Your Scraper API key ( [Sign up](https://docs.scraperapi.com/nodejs#:~:text=If%20you%20haven%E2%80%99t%20signed%20up%20for%20an%20account%20yet%2C%20then%20sign%20up%20for%20a%20free%20trial%20here%20with%205%2C000%20free%20API%20credits!))
 - `GROQ_API_KEY`: Your Groq API key. ( [Sign up](https://console.groq.com/?_gl=1*q5gy4q*_gcl_au*MTUyMTY0Mjc0My4xNzI2MTU2MTA0*_ga*NjkzOTAyMTg5LjE3MjYxNTYxMDQ.*_ga_4TD0X2GEZG*MTcyODI4MTgzOC4zLjEuMTcyODI4MTg3NC4yNC4wLjA.) )
 
 You can set these variables in a `.env` file at the root of the project.
