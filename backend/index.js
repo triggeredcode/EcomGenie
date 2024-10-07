@@ -12,13 +12,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const corsOptions = {
-    origin: process.env.FRONTEND_URL,
-    optionsSuccessStatus: 200
-};
+// const corsOptions = {
+//     origin: process.env.FRONTEND_URL,
+//     optionsSuccessStatus: 200
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
+app.use(cors)
 
 const groq = new Groq({ apiKey: process.env["GROQ_API_KEY"] });
 const serviceAdapter = new GroqAdapter({
@@ -26,24 +27,24 @@ const serviceAdapter = new GroqAdapter({
     model: "llama3-groq-8b-8192-tool-use-preview",
 });
 
-const productionserver = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
+// const productionServer = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
 
-if (productionServer) {
-    app.use((req, res, next) => {
-        const origin = req.headers.origin;
-        const frontendUrl = process.env.FRONTEND_URL;
+// if (productionServer) {
+//     app.use((req, res, next) => {
+//         const origin = req.headers.origin;
+//         const frontendUrl = process.env.FRONTEND_URL;
 
-        console.log(`Request Origin: ${origin}`);
-        console.log(`Frontend URL: ${frontendUrl}`);
+//         console.log(`Request Origin: ${origin}`);
+//         console.log(`Frontend URL: ${frontendUrl}`);
 
-        if (origin !== frontendUrl) {
-            console.log(`Forbidden access from origin: ${origin}`);
-            return res.status(403).send("Forbidden");
-        }
+//         if (origin !== frontendUrl) {
+//             console.log(`Forbidden access from origin: ${origin}`);
+//             return res.status(403).send("Forbidden");
+//         }
 
-        next();
-    });
-}
+//         next();
+//     });
+// }
 
 app.use("/api/copilotkit", async (req, res, next) => {
     try {
