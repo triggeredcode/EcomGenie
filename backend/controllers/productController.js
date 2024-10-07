@@ -1,7 +1,30 @@
 const axios = require('axios');
-const cache = require('../cache');
+
+const productionserver = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
+var cache = {};
+
+try {
+    cache = require('../cache');
+} catch (err) {
+    console.error("Error loading cache module:", err);
+    cache = {};
+}
 
 const fetchProducts = async (query) => {
+
+    if(!productionserver) {
+        const payload = {
+            api_key: process.env.SCRAPER_API_KEY,
+            url: query,
+            "autoparse": "true",
+            "country_code": "us",
+            "device_type": "desktop",
+            "session_number": String(process.env.SESSION_NUMBER || 1)
+        }
+
+        const response = await axios.get('https://api.scraperapi.com', { params: payload });
+        return response.data
+    }
 
     const cacheKey = `product_description_${query}`;
 
