@@ -11,7 +11,14 @@ const Groq = require("groq-sdk");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+
+const corsOptions = {
+    origin: process.env.FRONTEND_URL,
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 
 const groq = new Groq({ apiKey: process.env["GROQ_API_KEY"] });
 const serviceAdapter = new GroqAdapter({
@@ -21,15 +28,21 @@ const serviceAdapter = new GroqAdapter({
 
 const productionserver = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
 
-if(productionserver) {
+if (productionServer) {
     app.use((req, res, next) => {
         const origin = req.headers.origin;
+        const frontendUrl = process.env.FRONTEND_URL;
 
-        if (origin !== process.env["FRONTEND_URL"]) {
+        console.log(`Request Origin: ${origin}`);
+        console.log(`Frontend URL: ${frontendUrl}`);
+
+        if (origin !== frontendUrl) {
+            console.log(`Forbidden access from origin: ${origin}`);
             return res.status(403).send("Forbidden");
         }
+
         next();
-    }) 
+    });
 }
 
 app.use("/api/copilotkit", async (req, res, next) => {
