@@ -12,7 +12,7 @@ try {
 
 const fetchProducts = async (query) => {
 
-    if(!productionserver) {
+    if(productionserver) {
         const payload = {
             api_key: process.env.SCRAPER_API_KEY,
             url: query,
