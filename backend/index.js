@@ -19,6 +19,19 @@ const serviceAdapter = new GroqAdapter({
     model: "llama3-groq-8b-8192-tool-use-preview",
 });
 
+const productionserver = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
+
+if(productionserver) {
+    app.use((req, res, next) => {
+        const origin = req.headers.origin;
+
+        if (origin !== process.env["FRONTEND_URL"]) {
+            return res.status(403).send("Forbidden");
+        }
+        next();
+    }) 
+}
+
 app.use("/api/copilotkit", async (req, res, next) => {
     try {
         const runtime = new CopilotRuntime();

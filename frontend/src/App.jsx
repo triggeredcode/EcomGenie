@@ -45,6 +45,7 @@ const App = () => {
           title: "Shopping Assistant",
           initial: "Hi, I am your shopping assistant. What can I help you with?",
         }}
+
       />
     </CopilotKit>
   );
