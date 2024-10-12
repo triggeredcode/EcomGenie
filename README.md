@@ -5,12 +5,24 @@ EcomGenie is a web application that allows you to import products from various s
 
 ## UI
 
-- **Homepage**
-  - <img src="product_images/homepage.png" alt="HomePage" width="50%">
-- **Filters**
-  - <img src="product_images/product_filters.png" alt="Product-Filters" width="50%">
-- **ChatBot**
-  - <img src="product_images/shopping_assistant.png" alt="Shopping-Assistant" width="50%">
+ # Homepage
+<details>
+  <summary> Image</summary>
+  <img src="product_images/homepage.png" alt="HomePage" width="50%">
+</details>
+
+# Filters
+<details>
+  <summary> Image</summary>
+  <img src="product_images/product_filters.png" alt="Product-Filters" width="50%">
+</details>
+
+# ChatBot
+<details>
+  <summary> Image</summary>
+  <img src="product_images/shopping_assistant.png" alt="Shopping-Assistant" width="50%">
+</details>
+
 
 ## Table of Contents
 
