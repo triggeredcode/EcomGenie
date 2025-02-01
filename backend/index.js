@@ -24,7 +24,7 @@ app.use(cors)
 const groq = new Groq({ apiKey: process.env["GROQ_API_KEY"] });
 const serviceAdapter = new GroqAdapter({
     groq,
-    model: "llama3-groq-8b-8192-tool-use-preview",
+    model: "llama-3.1-8b-instant",
 });
 
 // const productionServer = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
