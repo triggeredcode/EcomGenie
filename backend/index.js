@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 const groq = new Groq({ apiKey: process.env["GROQ_API_KEY"] });
 const serviceAdapter = new GroqAdapter({
     groq,
-    model: "llama-3.1-8b-instant",
+    model: process.env.GROQ_MODEL,
 });
 
 // const productionServer = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
