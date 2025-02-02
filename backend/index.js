@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(cors(corsOptions));
 
-app.use(cors)
+// app.use(cors)
 
 const groq = new Groq({ apiKey: process.env["GROQ_API_KEY"] });
 const serviceAdapter = new GroqAdapter({
