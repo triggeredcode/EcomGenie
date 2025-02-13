@@ -12,12 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// const corsOptions = {
-//     origin: process.env.FRONTEND_URL,
-//     optionsSuccessStatus: 200
-// };
+const corsOptions = {
+    origin: process.env.FRONTEND_URL,
+    optionsSuccessStatus: 200
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // app.use(cors)
 
